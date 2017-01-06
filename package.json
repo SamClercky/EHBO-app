@@ -1,0 +1,20 @@
+{
+  "name": "ehbo",
+  "version": "1.0.0",
+  "description": "A utility to help people with EHBO",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "keywords": [
+    "EHBO",
+    "ehbo",
+    "utility"
+  ],
+  "author": "Clercky",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "socket.io": "^1.7.2"
+  }
+}

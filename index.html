@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="stylesheet" href="/themes/custom/jquery-ui.css">
+    <link rel="stylesheet" href="/styles.css" type="text/css" />
+    <link rel="shortcut icon" href="/favicon.ico">
+    <!-- Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="EHBO" />
+    <link rel="apple-touch-icon" href="images/icons/icon-152x152.png" />
+    <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png" />
+    <meta name="msapplication-TileColor" content="#2F3BA2" />
+
+    <script src="/jquery"></script>
+    <script src="/ui/jquery.ui.core.js"></script>
+    <script src="/ui/jquery.ui.widget.js"></script>
+    <script src="/ui/jquery.ui.accordion.js"></script>
+    <script>
+        var stap = ["ui-accordion-tabs-panel-0"];
+        var counter = 0;
+
+        function activated(evt, ui) {
+            counter++;
+            stap[counter] = ui.newPanel.attr("id");
+             for (var i = stap.length - 1; i > counter; i--) {
+                 stap.pop();
+             }
+             disableCheck();
+        }
+        function configure(select) {
+            $(select).accordion({
+                animate: 200,
+                active: parseInt(stap[0].substr(stap[0].length -1, 1)),
+                activate: activated
+            });
+        }
+        function disableCheck() {
+            console.log("disableCheck is aangeroepen");
+            var button;
+            button = $(".terug");
+            console.log(counter == 0);
+            if (counter == 0)
+                button.attr("disabled", "disabled");
+            else
+                button.attr("disabled", false);
+            button = $(".volgende");
+            console.log(counter >= stap.length);
+            if (counter >= stap.length-1)
+                button.attr("disabled", "disabled");
+            else
+                button.attr("disabled", false);
+        }
+        function navTo(id) {
+            $("#tabs").accordion("option", "active", id);
+        }
+        function nav(teken) {
+            switch(teken) {
+                case "-":
+                    if (counter > 0) {
+                        counter--;
+                    }
+                    disableCheck();
+                    navTo(parseInt(stap[0].substr(stap[0].length -1, 1)));
+                    break;
+                case "+":
+                    if (counter < stap.length -1) {
+                        counter++;
+                    }
+                    disableCheck();
+                    navTo(parseInt(stap[0].substr(stap[0].length -1, 1)));
+                    break;
+            }
+        }
+        $(window).on("load", function() {
+            configure("#tabs");
+            $(".terug").on("click", function() {
+                nav("-");
+            });
+            $(".volgende").on("click", function() {
+                nav("+");
+            })
+        });
+    </script>
+    <title>EHBO</title>
+  </head>
+  <body>
+      <header>
+          <button class="terug" disabled>&lt;</button>
+          <button class="volgende" disabled>&gt;</button>
+          EHBO
+      </header>
+      <header class="buffer">
+          <button class="terug">&lt;</button>
+          <button class="volgende">&gt;</button>
+          EHBO
+      </header>
+      <section id="tabs">
+          <h3>Stap 1: Veilig?</h3>
+          <article>
+              <h2>Is het voor JOU veilig om de patiënt te helpen?</h2>
+              De patiënt heeft er niets aan als JIJ ook verwond geraakt.<br>
+              Wacht tot het voor jou veilig is en probeer zeker niet de held te spelen als het te gevaarlijk is.
+              <br><br>
+              <button>Volgende</button>
+          </article>
+          <h3>Stap 2: Gemakkelijke houding</h3>
+          <article>
+              Zorg dat de patiënt in een gemakkelijke houding ligt.<br>
+              Zorg dat:<br>
+              <ul>
+                  <li></li>
+              </ul>
+              <br><br>
+              <button>Ja</button> 
+              <button>Nee</button>
+          </article>
+          <h3>Stap 3: Bij beswustzijn?</h3>
+          <article>
+              Kijk of de patiënt bij bewustzijn is.<br>
+              Is de patiënt bij bewustzijn?
+              <br><br>
+              <button>Ja</button> 
+              <button>Nee</button>
+          </article>
+          <h3>Stap 4: </h3>
+          <article>Dit is de derde stap</article>
+      </section>
+  </body>
+</html>
