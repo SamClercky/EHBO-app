@@ -10,48 +10,27 @@ html, body {
     height: 100%;
     overflow-x: hidden; 
 }
-header, footer {
-    background: #c00;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-}
-header {
-    position: absolute;
-    top: 0;
-    z-index: 1000;
-
-    font-weight: bold;
-    padding: 20px;
-    color: white;
+.header {
+    background: #f00 !important;
     text-align: center;
+    color: #fff !important;
+    font-weight: 500 !important;
+    padding-top: .8em;
+    padding-bottom: .8em;
 }
-header button {
-    display: inline;
-    position: absolute;
-    top: 10px;
-    width: 10%;
-}
-header button:first-child {
-    left: 10px;
-}
-header button:last-child {
-    right: 10px;
-}
-footer {
-    bottom: 0;
-}
-.buffer {
-    position: unset !important;
-    opacity: 0;
-}
-button {
+h3 {
+    font-size: 1.5em !important;
+    font-weight: bold !important;
+    width: 100%;
+    border-bottom: 1px solid #333;
     padding: 10px;
-    background: white;
-    width: 45%;
-    border-radius: 6px;
+    margin: 0px 0px 1.2em 0px;
 }
-button:disabled {
-    background: #888;
-    color: black;
+.ui-content {
+    text-align: justify;
+    text-justify: inter-word;
+    -ms-text-justify: inter-word;
+}
+a {
+    text-decoration: none;
 }

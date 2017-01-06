@@ -7,8 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="manifest" href="manifest.json" />
-    <link rel="stylesheet" href="bower_components/mobile/jquery.mobile-1.4.5.min.css">
-    <link rel="stylesheet" href="css/styles.css" type="text/css" />
+    <link rel="stylesheet" href="css/jquery-mobile.css" />
     <link rel="shortcut icon" href="favicon.ico">
     <!-- Safari -->
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -20,22 +19,22 @@
 
     <script src="js/jquery.js"></script>
     <script src="js/jquery-mobile.js"></script>
+    <link rel="stylesheet" href="css/styles.css" type="text/css" />
     <script src="js/mobile.js"></script>
-    
+
     <title>EHBO</title>
 </head>
 
 <body>
     <!--<header>
-          <button class="terug" disabled>&lt;</button>
-          <button class="volgende" disabled>&gt;</button>
-          EHBO
-      </header>
-      <header class="buffer">
-          <button class="terug">&lt;</button>
-          <button class="volgende">&gt;</button>
-          EHBO
-      </header>
+        <button class="terug" disabled>&lt;</button>
+        <button class="volgende" disabled>&gt;</button> EHBO
+    </header>
+    <header class="buffer">
+        <button class="terug">&lt;</button>
+        <button class="volgende">&gt;</button> EHBO
+    </header>-->
+    <!--</header>
       <section id="tabs">
           <h3>Stap 1: Veilig?</h3>
           <article>
@@ -69,19 +68,64 @@
       </section>-->
 
     <div data-role="page" id="page1">
-        <div data-role="header">
-            <h1>Page 1</h1>
-        </div>
+        <header data-role="header" class="header">
+            <button class="terug">&lt;</button>
+            <button class="volgende">&gt;</button> EHBO
+            <div class="clear"></div>
+        </header>
         <div role="main" class="ui-content">
-            <a href="#page2" data-transition="slide" class="ui-btn ui-corner-all ui-btn-inline">Go To Page 2</a>
+            <h3>Stap 1: Veilig?</h3>
+            <article>
+                <h2>Is het voor JOU veilig om de patiënt te helpen?</h2>
+                De patiënt heeft er niets aan als JIJ ook verwond geraakt. Wacht tot het voor jou veilig is en probeer zeker niet de held
+                te spelen als het te gevaarlijk is.
+                <br><br>
+                <a href="#page2"><button>Volgende</button></a>
+            </article>
         </div>
     </div>
     <div data-role="page" id="page2">
-        <div data-role="header">
-            <h1>Page 2</h1>
-        </div>
+        <header data-role="header" class="header">
+            <button class="terug">&lt;</button>
+            <button class="volgende">&gt;</button> EHBO
+        </header>
         <div role="main" class="ui-content">
-            <a href="#page1" data-rel="back" data-transition="slide" class="ui-btn ui-corner-all ui-btn-inline">Go Back To Page 1</a>
+            <h3>Stap 2: Gemakkelijke houding</h3>
+            <article>
+                Zorg dat de patiënt in een gemakkelijke houding ligt.<br> Zorg dat:<br>
+                <ul>
+                    <li></li>
+                </ul>
+                <br><br>
+                <a href="#page3"><button>Ja</button></a>
+                <a href="#page4"><button>Nee</button></a>
+            </article>
+        </div>
+    </div>
+    <div data-role="page" id="page3">
+        <header data-role="header" class="header">
+            <button class="terug">&lt;</button>
+            <button class="volgende">&gt;</button> EHBO
+        </header>
+        <div role="main" class="ui-content">
+            <h3>Stap 3: Bij beswustzijn?</h3>
+            <article>
+                Kijk of de patiënt bij bewustzijn is.<br> Is de patiënt bij bewustzijn?
+                <br><br>
+                <a href="#page1"><button>Ja</button></a>
+                <a href="#page4"><button>Nee</button></a>
+            </article>
+        </div>
+    </div>
+    <div data-role="page" id="page4">
+        <header data-role="header" class="header">
+            <button class="terug">&lt;</button>
+            <button class="volgende">&gt;</button> EHBO
+        </header>
+        <div role="main" class="ui-content">
+            <h3>Stap 4: </h3>
+            <article>Dit is de derde stap</article>
+            </article>
         </div>
     </div>
 </body>
