@@ -1,12 +1,13 @@
 <!doctype html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="manifest" href="manifest.json" />
-    <link rel="stylesheet" href="bower_components/jquery-ui/themes/custom/jquery-ui.css">
+    <link rel="stylesheet" href="bower_components/mobile/jquery.mobile-1.4.5.min.css">
     <link rel="stylesheet" href="css/styles.css" type="text/css" />
     <link rel="shortcut icon" href="favicon.ico">
     <!-- Safari -->
@@ -17,15 +18,15 @@
     <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png" />
     <meta name="msapplication-TileColor" content="#2F3BA2" />
 
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/jquery-ui/ui/jquery.ui.core.js"></script>
-    <script src="bower_components/jquery-ui/ui/jquery.ui.widget.js"></script>
-    <script src="bower_components/jquery-ui/ui/jquery.ui.accordion.js"></script>
-    <script src="js/index.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-mobile.js"></script>
+    <script src="js/mobile.js"></script>
+    
     <title>EHBO</title>
-  </head>
-  <body>
-      <header>
+</head>
+
+<body>
+    <!--<header>
           <button class="terug" disabled>&lt;</button>
           <button class="volgende" disabled>&gt;</button>
           EHBO
@@ -65,6 +66,24 @@
           </article>
           <h3>Stap 4: </h3>
           <article>Dit is de derde stap</article>
-      </section>
-  </body>
+      </section>-->
+
+    <div data-role="page" id="page1">
+        <div data-role="header">
+            <h1>Page 1</h1>
+        </div>
+        <div role="main" class="ui-content">
+            <a href="#page2" data-transition="slide" class="ui-btn ui-corner-all ui-btn-inline">Go To Page 2</a>
+        </div>
+    </div>
+    <div data-role="page" id="page2">
+        <div data-role="header">
+            <h1>Page 2</h1>
+        </div>
+        <div role="main" class="ui-content">
+            <a href="#page1" data-rel="back" data-transition="slide" class="ui-btn ui-corner-all ui-btn-inline">Go Back To Page 1</a>
+        </div>
+    </div>
+</body>
+
 </html>
