@@ -7,11 +7,20 @@ function navTo(id) {
 }
 
 function onStart(){
-    pointer = window.history.length;
+    console.log("onStart()");
+    var hypo = Math.sqrt(
+        Math.pow(window.innerWidth, 2) + 
+        Math.pow(window.innerHeight, 2)
+    );
+    hypo = Math.floor(hypo);
+    $(".page").css({
+        "background-image":
+        "radial-gradient(" + hypo + "px at 100% 0px, #fff 90%, #f93 93%, #c00 96%, #f93 95%, #fff 96% )"
+    });
 }
 
 function canGoBack() {
-    if (history.length > 2 || document.referrer.length > 0) {
+    if (history.length > 0 || document.referrer.length > 0) {
         return true;
     }else{
         return false;

@@ -5,18 +5,20 @@
     font: 1em Helvetica, Arial;
 }
 html, body {
-    background: #fff;
+    background: #006;
     width: 100%;
     height: 100%;
-    overflow-x: hidden; 
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 .header {
-    background: #f00 !important;
+    background: #006 !important;
     text-align: center;
     color: #fff !important;
     font-weight: 500 !important;
     padding-top: .8em;
     padding-bottom: .8em;
+    margin-top: 0px !important;
 }
 h3 {
     font-size: 1.5em !important;
@@ -25,6 +27,7 @@ h3 {
     border-bottom: 1px solid #333;
     padding: 10px;
     margin: 0px 0px 1.2em 0px;
+    text-align: left;
 }
 .ui-content {
     text-align: justify;
