@@ -37,3 +37,9 @@ h3 {
 a {
     text-decoration: none;
 }
+ul {
+    margin: 20px !important; 
+}
+span.under {
+    text-decoration: underline;
+}

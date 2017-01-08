@@ -1,0 +1,124 @@
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        
+        link(rel="manifest" href="manifest.json")
+        link(rel="stylesheet" href="css/jquery-mobile.css")
+        link(rel="shortcut icon" href="favicon.ico")
+        // Safari
+        meta(name="apple-mobile-web-app-capable" content="yes")
+        meta(name="apple-mobile-web-app-status-bar-style" content="black")
+        meta(name="apple-mobile-web-app-title" content="EHBO")
+        link(rel="apple-touch-icon" href="images/icons/icon-152x152.png")
+        meta(name="msapplication-TileImage" content="images/icons/icon-144x144.png")
+        meta(name="msapplication-TileColor" content="#2F3BA2")
+
+        script(src="js/jquery.js")
+        script(src="js/jquery-mobile.js")
+        link(rel="stylesheet" href="css/styles.css" type="text/css")
+        script(src="js/mobile.js")
+
+        title EHBO
+    body
+        div(data-role="page" id="veilig" class="page")
+            include header.jade
+            div(role="main" class="ui-content")
+                h3 Is het veilig?
+                article Voor:
+                    br
+                    ul
+                        li jezelf
+                        li het slachtoffer
+                        li de omstaanders
+                    br
+                    a(href="#wel_veilig")
+                        button Ja
+                    a(href="#niet_veilig")
+                        button Nee
+            include footer.jade
+        div(data-role="page" id="wel_veilig" class="page")
+            include header.jade
+            div(role="main" class="ui-content")
+                h3 Is het slachtoffer bij bewustzijn?
+                article
+                    | Check het bewustzijn:
+                    ul
+                        li Klop zachtjes op de schouder
+                        li Roep: Hallo, alles ok?
+                    | Reageert het slachtoffer:
+                    br
+                    a(href="#bewust")
+                        button Ja
+                    a(href="#niet_bewust")
+                        button Nee
+            include footer.jade
+        div(data-role="page" id="niet_veilig" class="page")
+            include header.jade
+            div(role="main" class="ui-content")
+                h3 Stop
+                article
+                    | Je kunt pas handelen wanneer het veilig is.
+                    br
+                    br
+                    br
+                    a(href="#wel_veilig")
+                        button Ja, nu is het veilig
+            include footer.jade
+        div(data-role="page" id="bewust" class="page")
+            include header.jade
+            div(role="main" class="ui-content")
+                h3 Het slachtoffer is bij bewustzijn
+                article
+                    | Stel volgende vragen:
+                    ul
+                        li 
+                        li 
+            include footer.jade
+        div(data-role="page" id="niet_bewust" class="page")
+            include header.jade
+            div(role="main" class="ui-content")
+                h3 Ademt het slachtoffer?
+                article
+                    | Check de ademhaling gedurende 10 seconden.
+                    br
+                    br
+                    | Doe de kinlift: voel, luister en kijk naar de ademhaling.
+                    br
+                    br
+                    | Ademt het slachtoffer?
+                    a(href="#ja_ademhaling")
+                        button Ja
+                    a(href="#nee_ademhaling")
+                        button Nee
+            include footer.jade
+        div(data-role="page" id="ja_ademhaling" class="page")
+            include header.jade
+            div(role="main" class="ui-content")
+                h3 Veiligheidshouding en bel 112
+                article
+                    | Leg het slachtoffer in zijligging en bel 112.
+                    br
+                    br
+                    button(class="b122") Bel 112
+            include footer.jade
+        div(data-role="page" id="nee_ademhaling" class="page")
+            include header.jade
+            div(role="main" class="ui-content")
+                h3 Bel 112 en zoek AED
+                article
+                    | Bel onmiddellijk naar 
+                    span.under 112
+                    |, probeer een 
+                    span.under AED
+                    |  toestel te verkrijgen en begin zo snel mogelijk te 
+                    span.under reanimeren
+                    | .
+                    br
+                    br
+                    br
+                    br
+                    button(class="b122") Bel 112
+            include footer.jade
