@@ -1,6 +1,6 @@
 <widget id="be.clercky.ehbo" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>EHBO</name>
-    <description>Een simpele EHBO-app die EHBO ondersteuning bied tijdens noodgevallen volgens de Belginsche wetgeving.</description>
+    <description>Een simpele EHBO-app die EHBO ondersteuning biedt tijdens noodgevallen volgens de Belginsche wetgeving.</description>
     <author href="https://github.com/SamClercky/EHBO-app/">Clercky</author>
     <content src="index.html"></content>
     <access origin="*" />
