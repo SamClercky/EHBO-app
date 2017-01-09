@@ -4,4 +4,5 @@
     <author href="https://github.com/SamClercky/EHBO-app/">Clercky</author>
     <content src="index.html"></content>
     <access origin="*" />
+    <plugin name="TTS" spec="https://github.com/vilic/cordova-plugin-tts.git">
 </widget>
