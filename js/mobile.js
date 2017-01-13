@@ -83,6 +83,7 @@ function startSpeak() {
 }
 
 document.addEventListener("deviceraedy", function() {
+    alert("Gestart");
     startSpeak();
     $(document).on("pagecontainerchange", function() {
         startSpeak();
