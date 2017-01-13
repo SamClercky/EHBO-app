@@ -68,9 +68,9 @@ $(window).on("load", function () {
 
 function speak(txt) {
     TTS.speak(txt, function() {
-        console.log("success");
+        alert("success");
     }, function(error) {
-        console.log(error);
+        alert(error);
     });
 }
 
