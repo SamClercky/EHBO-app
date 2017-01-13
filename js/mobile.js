@@ -73,6 +73,11 @@ function speak(txt) {
     }, function(error) {
         alert(error);
     });
+    alert("Gestart");
+    startSpeak();
+    $(document).on("pagecontainerchange", function() {
+        startSpeak();
+    });
 }
 
 function startSpeak() {
@@ -83,9 +88,4 @@ function startSpeak() {
 }
 
 document.addEventListener("deviceraedy", function() {
-    alert("Gestart");
-    startSpeak();
-    $(document).on("pagecontainerchange", function() {
-        startSpeak();
-    });
 })
