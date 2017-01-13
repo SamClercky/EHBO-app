@@ -60,4 +60,30 @@ $(window).on("load", function () {
     $("a").on("click", function() {
         disableCheck();
     });
+
+    var textField = $(".ui-page-active .ui-content").text();
+    console.log(textField);
+
 });
+
+function speak(txt) {
+    TTS.speak(txt, function() {
+        console.log("success");
+    }, function(error) {
+        console.log(error);
+    });
+}
+
+function startSpeak() {
+    var textField = $(".ui-page-active .ui-content").text();
+    console.log(textField);
+
+    speak(textField);
+}
+
+document.addEventListener("deviceraedy", function() {
+    startSpeak();
+    $(document).on("pagecontainerchange", function() {
+        startSpeak();
+    });
+})
