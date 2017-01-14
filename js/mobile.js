@@ -88,4 +88,5 @@ function startSpeak() {
 }
 
 document.addEventListener("deviceraedy", function() {
+    console.log("Hallo, ik ben gestart");
 })
