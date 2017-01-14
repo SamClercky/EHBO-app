@@ -3,6 +3,9 @@
     <description>Een simpele EHBO-app die EHBO ondersteuning biedt tijdens noodgevallen volgens de Belginsche wetgeving.</description>
     <author href="https://github.com/SamClercky/EHBO-app/">Clercky</author>
     <content src="index.html"></content>
+    <platform name="ios" />
+    <platform name="android" />
+    <platform name="winphone" />
     <access origin="*" />
     <plugin name="cordova-plugin-tts" spec="https://github.com/vilic/cordova-plugin-tts.git" />
 </widget>

@@ -87,6 +87,6 @@ function startSpeak() {
     speak(textField);
 }
 
-document.addEventListener("deviceraedy", function() {
+document.addEventListener("deviceready", function() {
     console.log("Hallo, ik ben gestart");
 })
