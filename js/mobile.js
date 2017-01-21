@@ -68,7 +68,7 @@ $(window).on("load", function () {
 
 function speak(txt) {
     alert("I will speak");
-    TTS.speak({
+    window.TTS.speak({
         "text": txt,
         "locale": "nl-BE",
         "rate": 1.5
