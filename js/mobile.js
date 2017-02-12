@@ -71,7 +71,7 @@ function speak(txt) {
     window.TTS.speak({
         "text": txt,
         "locale": "nl-BE",
-        "rate": 1.5
+        "rate": 0.75
     }, function() {
         console.log("success");
     }, function(error) {
