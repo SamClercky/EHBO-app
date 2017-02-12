@@ -88,6 +88,7 @@ function startSpeak() {
 
 document.addEventListener("deviceready", function() {
     console.log("Hallo, ik ben gestart");
+    startSpeak()
     $(document).on("pagecontainerchange", function() {
         startSpeak();
     });
