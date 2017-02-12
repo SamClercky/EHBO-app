@@ -67,20 +67,15 @@ $(window).on("load", function () {
 });
 
 function speak(txt) {
-    alert("I will speak");
+    console.log("I will speak");
     window.TTS.speak({
         "text": txt,
         "locale": "nl-BE",
         "rate": 1.5
     }, function() {
-        alert("success");
+        console.log("success");
     }, function(error) {
-        alert(error);
-    });
-    alert("Gestart");
-    startSpeak();
-    $(document).on("pagecontainerchange", function() {
-        startSpeak();
+        console.log(error);
     });
 }
 
@@ -93,4 +88,7 @@ function startSpeak() {
 
 document.addEventListener("deviceready", function() {
     console.log("Hallo, ik ben gestart");
+    $(document).on("pagecontainerchange", function() {
+        startSpeak();
+    });
 })
